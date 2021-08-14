@@ -1,6 +1,14 @@
 <?php
 namespace ChiefGroup\LaravelShare;
 
+use Hyperf\Jet\ClientFactory;
+use Hyperf\Jet\DataFormatter\DataFormatter;
+use Hyperf\Jet\Packer\JsonEofPacker;
+use Hyperf\Jet\PathGenerator\PathGenerator;
+use Hyperf\Jet\ProtocolManager;
+use Hyperf\Jet\ServiceManager;
+use Hyperf\Jet\Transporter\GuzzleHttpTransporter;
+use Hyperf\Jet\Transporter\StreamSocketTransporter;
 use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider as LaravelServiceProvider;
 
