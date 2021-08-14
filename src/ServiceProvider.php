@@ -1,4 +1,5 @@
 <?php
+
 namespace ChiefGroup\LaravelShare;
 
 use Hyperf\Jet\ClientFactory;
@@ -21,7 +22,7 @@ class ServiceProvider extends LaravelServiceProvider implements DeferrableProvid
     public function boot()
     {
         $this->publishes([
-            __DIR__.'/config.php' => config_path('qf_share.php')
+            __DIR__ . '/config.php' => config_path('qf_share.php')
         ], 'config');
     }
 
@@ -34,22 +35,22 @@ class ServiceProvider extends LaravelServiceProvider implements DeferrableProvid
     {
         //注册协议
         ProtocolManager::register($protocol = 'jsonrpc', [
-            ProtocolManager::TRANSPORTER => new StreamSocketTransporter(),
-            ProtocolManager::PACKER => new JsonEofPacker(),
+            ProtocolManager::TRANSPORTER    => new StreamSocketTransporter(),
+            ProtocolManager::PACKER         => new JsonEofPacker(),
             ProtocolManager::PATH_GENERATOR => new PathGenerator(),
             ProtocolManager::DATA_FORMATTER => new DataFormatter(),
         ]);
 
         ProtocolManager::register($protocol = 'jsonrpc-http', [
-            ProtocolManager::TRANSPORTER => new GuzzleHttpTransporter(),
-            ProtocolManager::PACKER => new JsonEofPacker(),
+            ProtocolManager::TRANSPORTER    => new GuzzleHttpTransporter(),
+            ProtocolManager::PACKER         => new JsonEofPacker(),
             ProtocolManager::PATH_GENERATOR => new PathGenerator(),
             ProtocolManager::DATA_FORMATTER => new DataFormatter(),
         ]);
 
         $clientFactory = new ClientFactory();
 
-        $this->app->singleton('IdGeneratorService', function ($app) use($clientFactory) {
+        $this->app->singleton('IdGeneratorService', function ($app) use ($clientFactory) {
             ServiceManager::register($service = 'IdGeneratorService', $protocol = 'jsonrpc-http', [
                 ServiceManager::NODES => [
                     [$host = config('qf_share.node.host'), $port = config('qf_share.node.port_http')],
@@ -57,6 +58,42 @@ class ServiceProvider extends LaravelServiceProvider implements DeferrableProvid
             ]);
 
             return $clientFactory->create($service = 'IdGeneratorService', $protocol = 'jsonrpc-http');
+        });
+
+        $this->app->singleton('WsService', function ($app) use ($clientFactory) {
+            ServiceManager::register($service = 'WsService', $protocol = 'jsonrpc-http', [
+                ServiceManager::NODES => [
+                    [$host = config('qf_share.node.host'), $port = config('qf_share.node.port_http')],
+                ],
+            ]);
+            return $clientFactory->create($service = 'WsService', $protocol = 'jsonrpc-http');
+        });
+
+        $this->app->singleton('WeightedRoundRobinService', function ($app) use ($clientFactory) {
+            ServiceManager::register($service = 'WeightedRoundRobinService', $protocol = 'jsonrpc-http', [
+                ServiceManager::NODES => [
+                    [$host = config('qf_share.node.host'), $port = config('qf_share.node.port_http')],
+                ],
+            ]);
+            return $clientFactory->create($service = 'WeightedRoundRobinService', $protocol = 'jsonrpc-http');
+        });
+
+        $this->app->singleton('QiniuService', function ($app) use ($clientFactory) {
+            ServiceManager::register($service = 'QiniuService', $protocol = 'jsonrpc-http', [
+                ServiceManager::NODES => [
+                    [$host = config('qf_share.node.host'), $port = config('qf_share.node.port_http')],
+                ],
+            ]);
+            return $clientFactory->create($service = 'QiniuService', $protocol = 'jsonrpc-http');
+        });
+
+        $this->app->singleton('AliyunService', function ($app) use ($clientFactory) {
+            ServiceManager::register($service = 'AliyunService', $protocol = 'jsonrpc-http', [
+                ServiceManager::NODES => [
+                    [$host = config('qf_share.node.host'), $port = config('qf_share.node.port_http')],
+                ],
+            ]);
+            return $clientFactory->create($service = 'AliyunService', $protocol = 'jsonrpc-http');
         });
     }
 
@@ -67,7 +104,7 @@ class ServiceProvider extends LaravelServiceProvider implements DeferrableProvid
      */
     public function provides()
     {
-        return ['IdGeneratorService'];
+        return ['IdGeneratorService', 'WsService', 'WeightedRoundRobinService', 'QiniuService', 'AliyunService'];
     }
 
 }
