@@ -2,20 +2,20 @@
 
 
 namespace ChiefGroup\LaravelShare;
-use Illuminate\Support\Facades\Facade as LaravelFacade;
+use Illuminate\Support\Facades\Facade;
 
 /**
  * Class IdGeneratorServiceFacade
  *
  * @method static string id();
  */
-class IdGeneratorServiceFacade extends LaravelFacade
+class IdGeneratorServiceFacade extends Facade
 {
     /**
      * @return string
      */
     public static function getFacadeAccessor()
     {
-        return 'qf.share';
+        return 'IdGeneratorService';
     }
 }
