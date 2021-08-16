@@ -15,7 +15,6 @@
         }
     },
     "require": {
-      "hyperf/composer-plugin": "^1.0",
       "hyperf/jet": "^0.4.0"
     },
     "minimum-stability": "stable",
