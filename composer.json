@@ -9,16 +9,13 @@
             "email": "sxpd7788@gmail.com"
         }
     ],
-    "autoload": {
-        "psr-4": {
-            "ChiefGroup\\LaravelShare\\": "src/"
-        }
-    },
+    
     "require": {
         "hyperf/jet": "^0.4.0"
     },
-    "minimum-stability": "stable",
-    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
     "extra": {
         "laravel": {
             "providers": [
@@ -32,6 +29,13 @@
                 "WsService": "ChiefGroup\\LaravelShare\\WsServiceFacade"
             }
         }
-    }
+    },
+    "autoload": {
+        "psr-4": {
+            "ChiefGroup\\LaravelShare\\": "src/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
 
 }
