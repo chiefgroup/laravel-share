@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static mixed smsSend(string $templateId, array $mobiles,  array $params = [])
  * @method static mixed smsIsFrequently($mobile, string $templateId)
  * @method static mixed cndRefreshUrls($urls)
+ * @method static string getPublicDownloadUrl($urls)
  */
 class QiniuServiceFacade extends Facade
 {
