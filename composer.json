@@ -11,6 +11,7 @@
     ],
     
     "require": {
+        "hyperf/composer-plugin": "^1.0",
         "hyperf/jet": "^0.4.0"
     },
     "require-dev": {
@@ -33,7 +34,15 @@
                 "AliyunService": "ChiefGroup\\LaravelShare\\AliyunServiceFacade",
                 "QiniuService": "ChiefGroup\\LaravelShare\\QiniuServiceFacade",
                 "WeightedRoundRobin": "ChiefGroup\\LaravelShare\\WeightedRoundRobinFacade",
-                "WsService": "ChiefGroup\\LaravelShare\\WsServiceFacade"
+                "WsService": "ChiefGroup\\LaravelShare\\WsServiceFacade",
+                "SmsCallbackLogService": "ChiefGroup\\LaravelShare\\SmsCallbackLogServiceFacade"
+            },
+            "hyperf": {
+                "plugin": {
+                    "sort-autoload": {
+                        "hyperf/utils": -1
+                    }
+                }
             }
         },
         "hyperf": {
