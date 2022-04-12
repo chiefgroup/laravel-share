@@ -34,13 +34,6 @@ class ServiceProvider extends LaravelServiceProvider implements DeferrableProvid
     public function register()
     {
         //注册协议
-        ProtocolManager::register($protocol = 'jsonrpc', [
-            ProtocolManager::TRANSPORTER    => new StreamSocketTransporter(),
-            ProtocolManager::PACKER         => new JsonEofPacker(),
-            ProtocolManager::PATH_GENERATOR => new PathGenerator(),
-            ProtocolManager::DATA_FORMATTER => new DataFormatter(),
-        ]);
-
         ProtocolManager::register($protocol = 'jsonrpc-http', [
             ProtocolManager::TRANSPORTER    => new GuzzleHttpTransporter(),
             ProtocolManager::PACKER         => new JsonEofPacker(),
