@@ -22,7 +22,7 @@ class ServiceProvider extends LaravelServiceProvider implements DeferrableProvid
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/config.php' => config_path('qf_share.php')
+            __DIR__ . '/../config/qf_share.php' => config_path('qf_share.php')
         ], 'config');
     }
 

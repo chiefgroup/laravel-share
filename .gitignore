@@ -1,14 +1,5 @@
 .idea
 .DS_STORE
-/vendor/
-node_modules/
-composer.lock
-npm-debug.log
-yarn-error.log
-
-storage/*.key
-.env
-Homestead.yaml
-Homestead.json
-/.vagrant
 .phpunit.result.cache
+composer.lock
+/vendor/
