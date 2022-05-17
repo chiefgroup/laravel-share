@@ -33,7 +33,8 @@
                 "AliyunService": "ChiefGroup\\LaravelShare\\AliyunServiceFacade",
                 "QiniuService": "ChiefGroup\\LaravelShare\\QiniuServiceFacade",
                 "WeightedRoundRobin": "ChiefGroup\\LaravelShare\\WeightedRoundRobinFacade",
-                "WsService": "ChiefGroup\\LaravelShare\\WsServiceFacade"
+                "WsService": "ChiefGroup\\LaravelShare\\WsServiceFacade",
+                "OperationLogService": "ChiefGroup\\LaravelShare\\OperationLogServiceFacade"
             }
         },
         "hyperf": {
