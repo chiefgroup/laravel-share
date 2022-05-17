@@ -90,7 +90,7 @@ class ServiceProvider extends LaravelServiceProvider implements DeferrableProvid
         });
 
         $this->app->singleton('OperationLogService', function ($app) use ($clientFactory) {
-            ServiceManager::register($service = 'AliyunService', $protocol = 'jsonrpc-http', [
+            ServiceManager::register($service = 'OperationLogService', $protocol = 'jsonrpc-http', [
                 ServiceManager::NODES => [
                     [$host = config('qf_share.node.host'), $port = config('qf_share.node.port_http')],
                 ],
