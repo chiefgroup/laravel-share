@@ -97,6 +97,15 @@ class ServiceProvider extends LaravelServiceProvider implements DeferrableProvid
             ]);
             return $clientFactory->create($service = 'OperationLogService', $protocol = 'jsonrpc-http');
         });
+
+        $this->app->singleton('EncryptService', function ($app) use ($clientFactory) {
+            ServiceManager::register($service = 'EncryptService', $protocol = 'jsonrpc-http', [
+                ServiceManager::NODES => [
+                    [$host = config('qf_share.node.port_http'), $port = config('qf_share.node.port_http')],
+                ],
+            ]);
+            return $clientFactory->create($service = 'EncryptService', $protocol = 'jsonrpc-http');
+        });
     }
 
     /**
@@ -106,7 +115,7 @@ class ServiceProvider extends LaravelServiceProvider implements DeferrableProvid
      */
     public function provides()
     {
-        return ['IdGeneratorService', 'WsService', 'WeightedRoundRobinService', 'QiniuService', 'AliyunService', 'OperationLogService'];
+        return ['IdGeneratorService', 'WsService', 'WeightedRoundRobinService', 'QiniuService', 'AliyunService', 'OperationLogService', 'EncryptService'];
     }
 
 }
