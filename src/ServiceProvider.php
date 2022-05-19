@@ -101,7 +101,7 @@ class ServiceProvider extends LaravelServiceProvider implements DeferrableProvid
         $this->app->singleton('EncryptService', function ($app) use ($clientFactory) {
             ServiceManager::register($service = 'EncryptService', $protocol = 'jsonrpc-http', [
                 ServiceManager::NODES => [
-                    [$host = config('qf_share.node.port_http'), $port = config('qf_share.node.port_http')],
+                    [$host = config('qf_share.node.host'), $port = config('qf_share.node.port_http')],
                 ],
             ]);
             return $clientFactory->create($service = 'EncryptService', $protocol = 'jsonrpc-http');
