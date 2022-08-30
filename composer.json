@@ -35,6 +35,7 @@
                 "WeightedRoundRobin": "ChiefGroup\\LaravelShare\\WeightedRoundRobinFacade",
                 "WsService": "ChiefGroup\\LaravelShare\\WsServiceFacade",
                 "OperationLogService": "ChiefGroup\\LaravelShare\\OperationLogServiceFacade",
+                "SmsService": "ChiefGroup\\LaravelShare\\SmsServiceFacade",
                 "EncryptService": "ChiefGroup\\LaravelShare\\EncryptServiceFacade"
             }
         },
