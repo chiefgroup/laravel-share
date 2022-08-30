@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Facade;
 /**
  * Class SmsServiceFacade
  *
- * @method static void sendCommonVerificationCode(string $mobile, string $code);
+ * @method static void sendCommonVerificationCode(string $mobile, string $code, string $signature));
  */
 class SmsServiceFacade extends Facade
 {
