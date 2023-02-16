@@ -39,7 +39,8 @@
                 "OperationLogService": "ChiefGroup\\LaravelShare\\OperationLogServiceFacade",
                 "SmsService": "ChiefGroup\\LaravelShare\\SmsServiceFacade",
                 "EncryptService": "ChiefGroup\\LaravelShare\\EncryptServiceFacade",
-                "OssService": "ChiefGroup\\LaravelShare\\OssServiceFacade"
+                "OssService": "ChiefGroup\\LaravelShare\\OssServiceFacade",
+                "Flomo": "ChiefGroup\\LaravelShare\\FlomoServiceFacade"
             }
         },
         "hyperf": {
