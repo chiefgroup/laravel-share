@@ -41,7 +41,8 @@
                 "EncryptService": "ChiefGroup\\LaravelShare\\EncryptServiceFacade",
                 "OssService": "ChiefGroup\\LaravelShare\\OssServiceFacade",
                 "Flomo": "ChiefGroup\\LaravelShare\\FlomoServiceFacade",
-                "DingtalkService": "ChiefGroup\\LaravelShare\\DingtalkServiceFacade"
+                "DingtalkService": "ChiefGroup\\LaravelShare\\DingtalkServiceFacade",
+                "SmoothWeightedRobin": "ChiefGroup\\LaravelShare\\SmoothWeightedRobinFacade"
             }
         },
         "hyperf": {
