@@ -7,8 +7,8 @@ use Illuminate\Support\Facades\Facade;
 /**
  * Class SmoothWeightedRobinFacade
  * @package App\Facade
- * @method static init(array $services, string $from)
- * @method static next(string $from)
+ * @method static void init(array $services, string $from)
+ * @method static mixed next(string $from)
  */
 class SmoothWeightedRobinFacade extends Facade
 {
