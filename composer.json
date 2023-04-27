@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "hyperf/jet": "^0.4.0"
+        "hyperf/jet": "^0.5.0"
     },
     "require-dev": {
         "guzzlehttp/guzzle": "^6.5 || ^7.5",
@@ -43,13 +43,6 @@
                 "Flomo": "ChiefGroup\\LaravelShare\\FlomoServiceFacade",
                 "DingtalkService": "ChiefGroup\\LaravelShare\\DingtalkServiceFacade",
                 "SmoothWeightedRobin": "ChiefGroup\\LaravelShare\\SmoothWeightedRobinFacade"
-            }
-        },
-        "hyperf": {
-            "plugin": {
-                "sort-autoload": {
-                    "hyperf/utils": -1
-                }
             }
         }
     },
