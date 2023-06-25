@@ -42,7 +42,8 @@
                 "OssService": "ChiefGroup\\LaravelShare\\OssServiceFacade",
                 "Flomo": "ChiefGroup\\LaravelShare\\FlomoServiceFacade",
                 "DingtalkService": "ChiefGroup\\LaravelShare\\DingtalkServiceFacade",
-                "SmoothWeightedRobin": "ChiefGroup\\LaravelShare\\SmoothWeightedRobinFacade"
+                "SmoothWeightedRobin": "ChiefGroup\\LaravelShare\\SmoothWeightedRobinFacade",
+                "BaiduBceService": "ChiefGroup\\LaravelShare\\BaiduBceServiceFacade"
             }
         },
         "hyperf": {
