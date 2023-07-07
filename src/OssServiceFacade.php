@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static string getObjectUrl(string $object);
  * @method static void deleteObject(string $object);
  * @method static void objectAcl(string $object, string $acl)
+ * @method static string getCustomDomainUrl(string $object)
  */
 class OssServiceFacade extends Facade
 {
