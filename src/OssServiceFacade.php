@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static void objectAcl(string $object, string $acl)
  * @method static string getCustomDomainUrl(string $object)
  * @method static string|array getSignedUrlObject($object, int $timeout = 3600, bool $flag = false)
+ * @method static array uploadSign(string $code, string $dir)
  */
 class OssServiceFacade extends Facade
 {
