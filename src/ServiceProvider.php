@@ -178,6 +178,15 @@ class ServiceProvider extends LaravelServiceProvider implements DeferrableProvid
             ]);
             return $clientFactory->create($service = 'NewDingtalkService', $protocol = 'jsonrpc-http');
         });
+
+        $this->app->singleton('OldDingtalkService', function ($app) use ($clientFactory) {
+            ServiceManager::register($service = 'OldDingtalkService', $protocol = 'jsonrpc-http', [
+                ServiceManager::NODES => [
+                    [$host = config('qf_share.node.host'), $port = config('qf_share.node.port_http')],
+                ],
+            ]);
+            return $clientFactory->create($service = 'OldDingtalkService', $protocol = 'jsonrpc-http');
+        });
     }
 
     /**
@@ -202,7 +211,8 @@ class ServiceProvider extends LaravelServiceProvider implements DeferrableProvid
             'SmoothWeightedRobin',
             'BaiduBceService',
             'MapService',
-            'NewDingtalkService'
+            'NewDingtalkService',
+            'OldDingtalkService'
         ];
     }
 

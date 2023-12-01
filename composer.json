@@ -44,8 +44,9 @@
                 "DingtalkService": "ChiefGroup\\LaravelShare\\DingtalkServiceFacade",
                 "SmoothWeightedRobin": "ChiefGroup\\LaravelShare\\SmoothWeightedRobinFacade",
                 "BaiduBceService": "ChiefGroup\\LaravelShare\\BaiduBceServiceFacade",
+                "MapService": "ChiefGroup\\LaravelShare\\MapServiceFacade",
                 "NewDingtalkService": "ChiefGroup\\LaravelShare\\NewDingtalkServiceFacade",
-                "MapService": "ChiefGroup\\LaravelShare\\MapServiceFacade"
+                "OldDingtalkService": "ChiefGroup\\LaravelShare\\OldDingtalkServiceFacade"
             }
         },
         "hyperf": {
