@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Facade;
  * @package App\Facade
  *
  * @method static mixed request(string $methods, string $uri, array $options = [])
- * @method static mixed getToken(string $appKey, string $appSecret)
+ * @method static mixed getToken()
  */
 class BaiduBceServiceFacade extends Facade
 {
