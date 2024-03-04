@@ -46,7 +46,8 @@
                 "BaiduBceService": "ChiefGroup\\LaravelShare\\BaiduBceServiceFacade",
                 "MapService": "ChiefGroup\\LaravelShare\\MapServiceFacade",
                 "NewDingtalkService": "ChiefGroup\\LaravelShare\\NewDingtalkServiceFacade",
-                "OldDingtalkService": "ChiefGroup\\LaravelShare\\OldDingtalkServiceFacade"
+                "OldDingtalkService": "ChiefGroup\\LaravelShare\\OldDingtalkServiceFacade",
+                "JiSuService": "ChiefGroup\\LaravelShare\\JiSuServiceFacade"
             }
         },
         "hyperf": {

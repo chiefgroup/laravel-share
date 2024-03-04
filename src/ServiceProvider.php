@@ -188,6 +188,15 @@ class ServiceProvider extends LaravelServiceProvider implements DeferrableProvid
             return $clientFactory->create($service = 'OldDingtalkService', $protocol = 'jsonrpc-http');
         });
 
+        $this->app->singleton('JiSuService', function ($app) use ($clientFactory) {
+            ServiceManager::register($service = 'JiSuService', $protocol = 'jsonrpc-http', [
+                ServiceManager::NODES => [
+                    [$host = config('qf_share.node.host'), $port = config('qf_share.node.port_http')],
+                ],
+            ]);
+            return $clientFactory->create($service = 'JiSuService', $protocol = 'jsonrpc-http');
+        });
+
         $this->app->singleton('CaptchaService', function ($app) use ($clientFactory) {
             ServiceManager::register($service = 'CaptchaService', $protocol = 'jsonrpc-http', [
                 ServiceManager::NODES => [
@@ -222,6 +231,7 @@ class ServiceProvider extends LaravelServiceProvider implements DeferrableProvid
             'MapService',
             'NewDingtalkService',
             'OldDingtalkService',
+            'JiSuService',
             'CaptchaService'
         ];
     }
