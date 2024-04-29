@@ -49,7 +49,8 @@
                 "OldDingtalkService": "ChiefGroup\\LaravelShare\\OldDingtalkServiceFacade",
                 "JiSuService": "ChiefGroup\\LaravelShare\\JiSuServiceFacade",
                 "CaptchaService": "ChiefGroup\\LaravelShare\\CaptchaServiceFacade",
-                "Ip2regionService": "ChiefGroup\\LaravelShare\\Ip2regionServiceFacade"
+                "Ip2regionService": "ChiefGroup\\LaravelShare\\Ip2regionServiceFacade",
+                "JuShuiTanService": "ChiefGroup\\LaravelShare\\JuShuiTanServiceFacade"
             }
         },
         "hyperf": {

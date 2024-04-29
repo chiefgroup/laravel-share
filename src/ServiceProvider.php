@@ -214,6 +214,15 @@ class ServiceProvider extends LaravelServiceProvider implements DeferrableProvid
             ]);
             return $clientFactory->create($service = 'Ip2regionService', $protocol = 'jsonrpc-http');
         });
+
+        $this->app->singleton('JuShuiTanService', function ($app) use ($clientFactory) {
+            ServiceManager::register($service = 'JuShuiTanService', $protocol = 'jsonrpc-http', [
+                ServiceManager::NODES => [
+                    [$host = config('qf_share.node.host'), $port = config('qf_share.node.port_http')],
+                ],
+            ]);
+            return $clientFactory->create($service = 'JuShuiTanService', $protocol = 'jsonrpc-http');
+        });
     }
 
     /**
@@ -242,7 +251,8 @@ class ServiceProvider extends LaravelServiceProvider implements DeferrableProvid
             'OldDingtalkService',
             'JiSuService',
             'CaptchaService',
-            'Ip2regionService'
+            'Ip2regionService',
+            'JuShuiTanService'
         ];
     }
 
