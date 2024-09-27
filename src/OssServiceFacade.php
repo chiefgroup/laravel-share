@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\Facade;
  * @method static string getCustomDomainUrl(string $object)
  * @method static string|array getSignedUrlObject($object, int $timeout = 3600, bool $flag = false, array $options = [])
  * @method static array uploadSign(string $code, string $dir)
+ * @method static string uploadFromUrl(string $code, string $url, string $acl = 'public-read')
+ * @method static array putObjects(string $code, array $objects, string $acl = 'public-read')
  */
 class OssServiceFacade extends Facade
 {
