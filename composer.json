@@ -50,7 +50,8 @@
                 "JiSuService": "ChiefGroup\\LaravelShare\\JiSuServiceFacade",
                 "CaptchaService": "ChiefGroup\\LaravelShare\\CaptchaServiceFacade",
                 "Ip2regionService": "ChiefGroup\\LaravelShare\\Ip2regionServiceFacade",
-                "JuShuiTanService": "ChiefGroup\\LaravelShare\\JuShuiTanServiceFacade"
+                "JuShuiTanService": "ChiefGroup\\LaravelShare\\JuShuiTanServiceFacade",
+                "TingWuService": "ChiefGroup\\LaravelShare\\TingWuServiceFacade"
             }
         },
         "hyperf": {
